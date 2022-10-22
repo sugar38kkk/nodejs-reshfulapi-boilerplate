@@ -1,6 +1,6 @@
 "use strict";
 
-const { signUp,signIn } = require("../services/auth.service");
+const { signUp, signIn, refreshToken, signout } = require("../services/auth.service");
 
 const that = (module.exports = {
   signUpNewUser: async (req, res, next) => {
@@ -22,12 +22,12 @@ const that = (module.exports = {
   signInUser: async (req, res, next) => {
     try {
       const { username, password } = req.body;
-      const userAgent = req.headers['user-agent'];
+      const userAgent = req.headers["user-agent"];
       return res.json({
         data: await signIn({
           username,
           password,
-          userAgent
+          userAgent,
         }),
       });
     } catch (error) {
@@ -37,7 +37,31 @@ const that = (module.exports = {
   getProfile: async (req, res, next) => {
     try {
       return res.json({
-        data: req.user
+        data: req.user,
+      });
+    } catch (error) {
+      next(error);
+    }
+  },
+  refreshTokenUser: async (req, res, next) => {
+    try {
+      return res.json({
+        data: await refreshToken({
+          userId: req.user.id,
+          userAgent: req.userAgent,
+        }),
+      });
+    } catch (error) {
+      next(error);
+    }
+  },
+  signoutUser: async (req, res, next) => {
+    try {
+      return res.json({
+        data: await signout({
+          userId: req.user.id,
+          userAgent: req.userAgent,
+        }),
       });
     } catch (error) {
       next(error);

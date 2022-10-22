@@ -1,4 +1,5 @@
 const { makeSubscriber } = require("amqp-simple-pub-sub");
+const logger = require("../../utils/logger")
 
 const { AMPQ_URI } = process.env;
 
@@ -18,6 +19,7 @@ const createSubcriber = (exchange, queueName, callback = () => {}) => {
   });
 
   const handler = (message) => {
+    logger.info(("Message Received::", queueName))
     console.log("Message Received::", queueName);
     callback(message);
     subscriber.ack(message);

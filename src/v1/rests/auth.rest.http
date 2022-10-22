@@ -27,4 +27,14 @@ Content-Type: application/json
 ### profile
 
 GET {{urlDev}}/v1/auth/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzUzNWRhZDMxOTJjODFkMTdlNjY1MmUiLCJpYXQiOjE2NjY0MTk5OTEsImV4cCI6MTY2NjQyMDg5MX0.LhlAjCTSUh10WS1CrqtSF0k9xF5G0EyliA75bmdzEbQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzUzNWRhZDMxOTJjODFkMTdlNjY1MmUiLCJpYXQiOjE2NjY0MzAwMDIsImV4cCI6MTY2NjQzMDkwMn0.DFe-EUtMW5gQDGIJ3dBdLJHM4lD2qfE0pxCZnzqjU-Y
+
+### signout
+
+GET {{urlDev}}/v1/auth/signout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzUzNWRhZDMxOTJjODFkMTdlNjY1MmUiLCJpYXQiOjE2NjY0MzAwMDIsImV4cCI6MTY2NjQzMDkwMn0.DFe-EUtMW5gQDGIJ3dBdLJHM4lD2qfE0pxCZnzqjU-Y
+
+### refresh token
+
+GET {{urlDev}}/v1/auth/refresh-token
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzUzNWRhZDMxOTJjODFkMTdlNjY1MmUiLCJpYXQiOjE2NjY0Mjk5ODksImV4cCI6MTY2OTAyMTk4OX0.L0lzhibW9TxwlGi4C0P1DdbS6Sw-5jJ3eTFs7sfOqjo

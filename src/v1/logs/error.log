@@ -103,3 +103,18 @@ error: Oct-22-2022 15:00:34: 	jwt expired
 error: Oct-22-2022 15:17:33: 	invalid request
 error: Oct-22-2022 15:17:36: 	invalid request
 error: Oct-22-2022 15:18:03: 	invalid request
+error: Oct-22-2022 16:24:38: 	user already exists
+error: Oct-22-2022 16:24:39: 	user already exists
+error: Oct-22-2022 16:24:54: 	jwt expired
+error: Oct-22-2022 16:41:56: 	jwt expired
+error: Oct-22-2022 16:42:34: 	jwt expired
+error: Oct-22-2022 16:50:59: 	jwt expired
+error: Oct-22-2022 16:53:25: 	Token expired
+error: Oct-22-2022 16:55:44: 	Token expired
+error: Oct-22-2022 17:12:01: 	Invalid token
+error: Oct-22-2022 17:12:58: 	Invalid token
+error: Oct-22-2022 17:13:00: 	Invalid token
+error: Oct-22-2022 17:13:01: 	Token expired
+error: Oct-22-2022 17:26:01: 	Unauthorized is not a constructor
+error: Oct-22-2022 17:26:17: 	Unauthorized is not a constructor
+error: Oct-22-2022 17:27:26: 	Invalid Authentication.

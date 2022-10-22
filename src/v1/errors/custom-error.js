@@ -112,8 +112,24 @@ class ErrNoPermission extends CustomError {
   constructor() {
     super(`You have no permission`);
 
-    this.status = 400;
+    this.status = 403;
     this.key = `ErrNoPermission`
+  }
+}
+class ErrUnauthorized extends CustomError {
+  constructor(message,key) {
+    super(message || `Unauthorized`,key);
+
+    this.status = 401;
+    this.key = key || `ErrUnauthorized`
+  }
+}
+class ErrTokenExpired extends CustomError {
+  constructor() {
+    super("Token expired");
+
+    this.status = 401;
+    this.key = "ErrTokenExpired"
   }
 }
 
@@ -130,5 +146,7 @@ module.exports = {
   ErrEntityExisted,
   ErrCannotCreateEntity,
   ErrNoPermission,
-  ErrBadRequest
+  ErrBadRequest,
+  ErrUnauthorized,
+  ErrTokenExpired
 };

@@ -1,13 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const { body } = require("express-validator");
-const requireAuth = require("../middlewares/require-auth")
-
+const requireAuth = require("../middlewares/require-auth.middleware");
+const verifyRefreshToken = require("../middlewares/verify-refresh-token.middleware");
 
 const {
   signUpNewUser,
   signInUser,
   getProfile,
+  refreshTokenUser,
+  signoutUser,
 } = require("../controllers/auth.controller");
 const {
   validateRequest,
@@ -54,8 +56,10 @@ router.post(
   signInUser
 );
 
-router.get("/v1/auth/profile",requireAuth, getProfile);
+router.get("/v1/auth/profile", requireAuth, getProfile);
 
+router.get("/v1/auth/signout", requireAuth, signoutUser);
 
+router.get("/v1/auth/refresh-token", verifyRefreshToken, refreshTokenUser);
 
 module.exports = router;
