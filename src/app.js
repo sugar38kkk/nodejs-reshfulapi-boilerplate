@@ -3,8 +3,44 @@ const app = express();
 const helmet = require("helmet");
 const morgan = require("morgan");
 const compression = require("compression");
+const swaggerJsDoc = require("swagger-jsdoc")
+const swaggerUI = require("swagger-ui-express")
+
 const loggerV1 = require("./v1/utils/logger");
 const initSubcriber = require("./v1/pubsub/subcriber/init.subcriber");
+
+
+const swaggerOptions = {
+  explorer: true,
+  swaggerDefinition: {
+    info: {
+      version: "1.0.0",
+      title: "Blog Dev API",
+      description: "Blog Dev API Information",
+      contact: {
+        name: "STech"
+      },
+      servers: ["http://localhost:3051"]
+    }
+  },
+  // ['.routes/*.js']
+  apis: ["src/app.js"]
+};
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use("/docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
+
+// Routes
+/**
+ * @swagger
+ * /:
+ *    post:
+ *      description: Hello
+ *    responses:
+ *      '200':
+ *        description: Successfully created user
+ */
+
 
 //init dbs
 require("./v1/databases/init.mongodb");

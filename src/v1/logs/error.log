@@ -99,3 +99,7 @@ error: Oct-22-2022 14:23:16: 	userId is not defined
 error: Oct-22-2022 14:41:40: 	jwt expired
 error: Oct-22-2022 14:41:44: 	jwt expired
 error: Oct-22-2022 14:59:39: 	Not found
+error: Oct-22-2022 15:00:34: 	jwt expired
+error: Oct-22-2022 15:17:33: 	invalid request
+error: Oct-22-2022 15:17:36: 	invalid request
+error: Oct-22-2022 15:18:03: 	invalid request
