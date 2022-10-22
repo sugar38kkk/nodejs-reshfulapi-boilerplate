@@ -1,0 +1,30 @@
+@urlDev=http://localhost:3051
+
+### signup
+
+POST {{urlDev}}/v1/auth/signup
+Content-Type: application/json
+
+{
+    "first_name": "Quang",
+    "last_name":"Hoang",
+    "username": "quang.hoang",
+    "email": "nhatquang@gmail.com",
+    "password": "hnquang@02"
+}
+
+### signin
+
+POST {{urlDev}}/v1/auth/signin
+Content-Type: application/json
+
+{
+    "username": "nhatquang@gmail.com",
+    "password": "hnquang@02"
+}
+
+
+### profile
+
+GET {{urlDev}}/v1/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzUzNWRhZDMxOTJjODFkMTdlNjY1MmUiLCJpYXQiOjE2NjY0MTk5OTEsImV4cCI6MTY2NjQyMDg5MX0.LhlAjCTSUh10WS1CrqtSF0k9xF5G0EyliA75bmdzEbQ

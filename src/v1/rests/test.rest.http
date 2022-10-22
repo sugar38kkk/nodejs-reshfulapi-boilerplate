@@ -1,0 +1,33 @@
+@urlDev=http://localhost:3051
+
+### checkStatus
+
+GET {{urlDev}}/checkstatus
+
+### set user
+
+POST {{urlDev}}/v1/user
+Content-Type: application/json
+
+{
+    "key": "u:100002",
+    "payload": {
+        "uid": 100002,
+        "name": "SuTech2"
+    },
+    "expire": 500
+}
+
+### get user
+
+GET {{urlDev}}/v1/user/u:100002
+# Content-Type: application/json
+
+# {
+#     "key": "u:100002"
+# }
+
+
+### delete user
+
+DELETE  {{urlDev}}/v1/user/u:100002
