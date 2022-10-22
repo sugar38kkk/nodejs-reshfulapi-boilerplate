@@ -26,5 +26,5 @@ Content-Type: application/json
 
 ### profile
 
-GET {{urlDev}}/v1/auth/profile
+GET {{urlDev}}/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzUzNWRhZDMxOTJjODFkMTdlNjY1MmUiLCJpYXQiOjE2NjY0MTk5OTEsImV4cCI6MTY2NjQyMDg5MX0.LhlAjCTSUh10WS1CrqtSF0k9xF5G0EyliA75bmdzEbQ
