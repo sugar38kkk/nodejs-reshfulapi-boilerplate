@@ -55,4 +55,9 @@ app.use((error, req, res, next) => {
   });
 });
 
+// main
+app.use((req, res, next) => {
+  res.send("WELCOME TO API BLOG DEV")
+});
+
 module.exports = app;
